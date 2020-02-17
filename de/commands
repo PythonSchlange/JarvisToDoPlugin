@@ -1,1 +1,4 @@
-*Berechne* (*)==chiffre
+*DENKE* DRAN (*)|*DENKE* ÜBER (*)|ERINNERE MICH (*) ZU MACHEN==say "Aufgabe $(pg_todo_add "(1)"), hinzugefügt"
+*LÖSCHE AUFGABE NUMMER (*)|*BRECHE AUFGABE NUMMER (*) AB==output=$(pg_todo_del "(1)") && say "Aufgabe $output, gelöscht" || say "Ich konnte die Aufgabe nicht löschen"
+*AUFGABE NUMMER (*) ERLEDIGT|*AUFGABE NUMMER (*) BEENDET==output=$(pg_todo_done "(1)") && say "Aufgabe $output, als fertig gelöscht" || say "Ich konnte die Aufgabe nicht beenden"
+*AUFGABENLISTE|*WAS SOLL ICH MACHEN|*WAS STEHT AN==pg_todo_list
